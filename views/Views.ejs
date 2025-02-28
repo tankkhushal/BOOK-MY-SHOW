@@ -1,0 +1,37 @@
+<%- include('./Layoutes/Header') %>
+
+
+
+<div class="d-flex">
+    <% MovieShow.map((v, i) => { %>
+        <div class="movie-card d-flex">
+            <div>
+                <img src="<%= v.image %>" alt="<%= v.title %>">
+            </div>
+            <div>
+                <h1><%= v.title %></h1>
+              
+                <div class="rating">
+                    <h2>Rating =><i class="fa-solid fa-star" style="color:rgb(24, 24, 16);"></i><%= v.rating %></h2>
+                </div>
+                <div class="movie-details">
+                    <div>
+                        <h3><strong>Type =></strong> <%= v.type %></h3>
+                    </div>
+                
+                    <div>
+                        <h3><strong>Duration =></strong> <%= v.movietime %></h3>
+                    </div>
+                    <div>
+                        <h3><strong>Release Date =></strong> <%= v.date %></h3>
+                    </div>
+                   
+                </div>
+                <h3>Available in => 2D, 3D, HD, HDR, 4DX </h3>
+               
+            </div>
+        </div>
+    <% }) %>
+</div>
+
+<script src="https://kit.fontawesome.com/f24426156c.js" crossorigin="anonymous"></script>

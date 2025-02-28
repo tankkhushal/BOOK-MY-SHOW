@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Movies</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-btn {
+            font-size: 16px;
+            color: #007bff;
+            text-decoration: none;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .back-btn:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .rating-group input {
+            margin-right: 10px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/" class="back-btn"> < Back </a>
+    <div class="container mt-5">
+        <h2 class="mb-4">Add Your Movie</h2>
+        <form method="post" action="/insertMovies" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" class="form-control" id="name" name="title" placeholder="Enter movie title" required>
+            </div>
+            <div class="form-group rating-group">
+                <label for="rating">Rating:</label><br>
+                <input type="radio" id="rating1" name="rating" value="1" required> 1
+                <input type="radio" id="rating2" name="rating" value="2" required> 2
+                <input type="radio" id="rating3" name="rating" value="3" required> 3
+                <input type="radio" id="rating4" name="rating" value="4" required> 4
+                <input type="radio" id="rating5" name="rating" value="5" required> 5
+                <input type="radio" id="rating6" name="rating" value="6" required> 6
+                <input type="radio" id="rating7" name="rating" value="7" required> 7
+                <input type="radio" id="rating8" name="rating" value="8" required> 8
+                <input type="radio" id="rating9" name="rating" value="9" required> 9
+                <input type="radio" id="rating10" name="rating" value="10" required> 10
+            </div>
+            <div class="form-group">
+                <label for="type">Movie Type:</label>
+                <input type="text" class="form-control" id="type" name="type" placeholder="Enter movie type" required>
+            </div> 
+            <div class="form-group">
+                <label for="language">Movie Language:</label>
+                <input type="text" class="form-control" id="language" name="language" placeholder="Enter movie language" required>
+            </div>
+            <div class="form-group">
+                <label for="movietime">Movie Time:</label>
+                <input type="text" class="form-control" id="movietime" name="movietime" placeholder="Enter movie time" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Release Date:</label>
+                <input type="date" class="form-control" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="image">Movie Image:</label>
+                <input type="file" class="form-control" id="image" name="image" required>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Submit">
+        </form>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
